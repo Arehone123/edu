@@ -49,7 +49,7 @@ function Footer() {
                                 }}
                             >
                                 <img
-                                    src="src/assets/edutrackai%20logo.jpeg"
+                                    src="src/edutrackai%20logo.jpeg"
                                     alt="EduTrack Logo"
                                     style={{
                                         width: "100%",

@@ -28,7 +28,7 @@ function App() {
                 <div style={{
                     position: "absolute",
                     inset: 0,
-                    backgroundImage: "url('src/assets/edutrackai logo.jpeg')",
+                    backgroundImage: "url('src/edutrackai logo.jpeg')",
                     backgroundRepeat: "repeat",
                     backgroundSize: "150px",
                     opacity: 0.08,
@@ -199,7 +199,7 @@ function App() {
                                 marginBottom: "1rem"
                             }}>
                                 <img
-                                    src="src/assets/eagle%20logo.jpeg"
+                                    src="src\eagle logo.jpeg"
                                     alt="Avuyile Disane"
                                     style={{
                                         width: "220px",
@@ -356,7 +356,7 @@ function App() {
 
                             {/* Download PDF */}
                             <a
-                                href="src/assets/EduTrack_AI_Software_Company_Profile.pdf"
+                                href="EduTrack_AI_Software_Company_Profile.pdf"
                                 download="EduTrackAI_BusinessProfile.pdf"
                                 style={{
                                     padding: "1rem 2rem",
@@ -407,17 +407,17 @@ function App() {
                                 {
                                     title: "Student Dashboard",
                                     desc: "Track your progress, view assignments, and interact with teachers.",
-                                    img: "src/assets/student.jpeg"
+                                    img: "src/student.jpeg"
                                 },
                                 {
                                     title: "Teacher Dashboard",
                                     desc: "Monitor student performance, submit grades, and manage classes efficiently.",
-                                    img: "src/assets/principal.jpeg"
+                                    img: "src/principal.jpeg"
                                 },
                                 {
                                     title: "Principal Dashboard",
                                     desc: "Get insights into school-wide performance and make strategic decisions.",
-                                    img: "src/assets/teacher.jpeg"
+                                    img: "src/teacher.jpeg"
                                 }
                             ].map((dashboard, idx) => (
                                 <div
