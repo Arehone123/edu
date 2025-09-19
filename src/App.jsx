@@ -599,7 +599,7 @@ function App() {
 
                     {/* Contact Section */}
                     <div style={{
-                        width: "100%",
+                        width: "90%",
                         background: "rgba(255,255,255,0.9)",
                         backdropFilter: "blur(20px)",
                         padding: "3rem",
