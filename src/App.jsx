@@ -2,6 +2,9 @@ import './App.css'
 import Navbar from "./navbar.jsx";
 import Footer from "./Footer.jsx";
 import KeyBenefits from "./KeyBenefits.jsx";
+import EduTrackPricing from "./pricing.jsx";
+import EduTrackHero from "./EduTrackHero.jsx";
+import ContactSection from "./contact us.jsx";
 
 function App() {
     return (
@@ -9,117 +12,10 @@ function App() {
             <Navbar/>
 
             {/* Banner / Landing Page */}
-            <div style={{
-                width: "100vw",
-                height: "100vh",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                background: "linear-gradient(135deg, #006d77 0%, #2E8B8B 25%, #4ECDC4 50%, #45B7B8 75%, #006d77 100%)",
-                backgroundSize: "400% 400%",
-                animation: "gradientBG 15s ease infinite",
-                color: "white",
-                textAlign: "center",
-                overflow: "hidden",
-                position: "relative"
-            }}>
-                {/* Animated background logos */}
-                <div style={{
-                    position: "absolute",
-                    inset: 0,
-                    backgroundImage: "url('src/edutrackai logo.jpeg')",
-                    backgroundRepeat: "repeat",
-                    backgroundSize: "150px",
-                    opacity: 0.08,
-                    zIndex: 0
-                }}></div>
-
-                {/* Floating particles effect */}
-                <div style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(255,255,255,0.06) 0%, transparent 50%)",
-                    zIndex: 1
-                }}></div>
-
-                {/* Title */}
-                <h1 style={{
-                    fontSize: "clamp(2.5rem, 6vw, 4rem)",
-                    fontWeight: "700",
-                    margin: "0",
-                    zIndex: 2,
-                    textShadow: "0 4px 20px rgba(0,0,0,0.3)",
-                    letterSpacing: "-0.02em"
-                }}>
-                    EduTrack AI Software
-                </h1>
-
-                {/* Subtitle */}
-                <p style={{
-                    fontSize: "clamp(1.1rem, 3vw, 1.4rem)",
-                    marginTop: "1rem",
-                    maxWidth: "600px",
-                    zIndex: 2,
-                    opacity: 0.95,
-                    fontWeight: "300"
-                }}>
-                    Smart Education Management
-                </p>
-
-                {/* Call-to-action button */}
-                <a
-                    href="#get-started"
-                    style={{
-                        marginTop: "2.5rem",
-                        padding: "1rem 2.5rem",
-                        background: "rgba(255,255,255,0.15)",
-                        backdropFilter: "blur(10px)",
-                        border: "1px solid rgba(255,255,255,0.2)",
-                        color: "white",
-                        textDecoration: "none",
-                        borderRadius: "50px",
-                        fontWeight: "600",
-                        fontSize: "1.1rem",
-                        zIndex: 2,
-                        transition: "all 0.3s ease",
-                        boxShadow: "0 8px 32px rgba(0,0,0,0.2)"
-                    }}
-                    onMouseOver={(e) => {
-                        e.target.style.background = "rgba(255,255,255,0.25)";
-                        e.target.style.transform = "translateY(-2px)";
-                        e.target.style.boxShadow = "0 12px 40px rgba(0,0,0,0.3)";
-                    }}
-                    onMouseOut={(e) => {
-                        e.target.style.background = "rgba(255,255,255,0.15)";
-                        e.target.style.transform = "translateY(0)";
-                        e.target.style.boxShadow = "0 8px 32px rgba(0,0,0,0.2)";
-                    }}
-                >
-                    Get Started
-                </a>
-
-                {/* Enhanced animations */}
-                <style>
-                    {`
-                      @keyframes gradientBG {
-                        0% { background-position: 0% 50%; }
-                        50% { background-position: 100% 50%; }
-                        100% { background-position: 0% 50%; }
-                      }
-                
-                      @keyframes popOut {
-                        0% { transform: scale(0.6); opacity: 0.2; }
-                        50% { transform: scale(1.2); opacity: 0.05; }
-                        100% { transform: scale(2.0); opacity: 0; }
-                      }
-                    `}
-                </style>
-            </div>
-
+           <EduTrackHero />
             {/* About Us Section */}
             <div style={{
-                width: "100%",
+                width: "1500px",
                 minHeight: "100vh",
                 background: "linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)",
                 padding: "5rem 1.25rem",
@@ -129,8 +25,8 @@ function App() {
                 justifyContent: "center",
             }}>
                 <div style={{
-                    maxWidth: "1200px",
-                    width: "100%",
+                    maxWidth: "1500px",
+                    width: "1500",
                     display: "flex",
                     flexDirection: "column",
                     gap: "4rem",
@@ -164,7 +60,7 @@ function App() {
                             color: "#475569",
                             fontWeight: "500"
                         }}>
-                            EduTrack AI, proudly brought to you by EduTrack AI Software, is dedicated to
+                            EduTrack AI Software, proudly brought to you by Disane Technologies, is dedicated to
                             making school management and learner success effortless. We empower educators and school
                             leaders with real-time insights into learner performance.
                         </p>
@@ -472,309 +368,12 @@ function App() {
                     </div>
 
                     {/* Pricing Section */}
-                    <div
-                        style={{
-                            width: "100%",
-                            border: "2px solid rgba(0,109,119,0.3)",
-                            borderRadius: "40px",
-                            background: "transparent",
-                            padding: "3.5rem 2rem",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            gap: "3rem",
-                            boxShadow: "0 12px 40px rgba(0,0,0,0.05)",
-                        }}
-                    >
-                        <h2
-                            style={{
-                                fontSize: "clamp(2rem, 5vw, 2.5rem)",
-                                background: "linear-gradient(135deg, #006d77, #2E8B8B)",
-                                WebkitBackgroundClip: "text",
-                                WebkitTextFillColor: "transparent",
-                                backgroundClip: "text",
-                                fontWeight: "800",
-                                textAlign: "center",
-                                margin: 0,
-                            }}
-                        >
-                            Pricing
-                        </h2>
-
-                        <div
-                            style={{
-                                display: "grid",
-                                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                                gap: "2rem",
-                                width: "100%",
-                                maxWidth: "800px",
-                            }}
-                        >
-                            {[
-                                {
-                                    title: "Village Schools",
-                                    price: "R80 per learner per year",
-                                    desc: "Affordable rates to support education in village schools",
-                                    gradient: "linear-gradient(135deg, #10B981, #059669)",
-                                },
-                                {
-                                    title: "Other Schools",
-                                    price: "R200 per learner per year",
-                                    desc: "Comprehensive package for all other schools",
-                                    gradient: "linear-gradient(135deg, #006d77, #2E8B8B)",
-                                },
-                            ].map((plan, idx) => (
-                                <div
-                                    key={idx}
-                                    style={{
-                                        border: "2px solid rgba(0,109,119,0.2)",
-                                        borderRadius: "24px",
-                                        background: "transparent",
-                                        padding: "2.5rem",
-                                        textAlign: "center",
-                                        transition: "all 0.3s ease",
-                                        position: "relative",
-                                        overflow: "hidden",
-                                        boxShadow: "0 8px 30px rgba(0,0,0,0.05)",
-                                    }}
-                                    onMouseOver={(e) => {
-                                        e.currentTarget.style.transform = "translateY(-6px)";
-                                        e.currentTarget.style.boxShadow =
-                                            "0 18px 50px rgba(0,109,119,0.15)";
-                                        e.currentTarget.style.borderColor = "rgba(0,109,119,0.4)";
-                                    }}
-                                    onMouseOut={(e) => {
-                                        e.currentTarget.style.transform = "translateY(0)";
-                                        e.currentTarget.style.boxShadow = "0 8px 30px rgba(0,0,0,0.05)";
-                                        e.currentTarget.style.borderColor = "rgba(0,109,119,0.2)";
-                                    }}
-                                >
-                                    <div
-                                        style={{
-                                            position: "absolute",
-                                            top: 0,
-                                            left: 0,
-                                            right: 0,
-                                            height: "4px",
-                                            background: plan.gradient,
-                                        }}
-                                    ></div>
-                                    <h3
-                                        style={{
-                                            fontSize: "1.5rem",
-                                            color: "#006d77",
-                                            marginBottom: "1rem",
-                                            fontWeight: "700",
-                                        }}
-                                    >
-                                        {plan.title}
-                                    </h3>
-                                    <p
-                                        style={{
-                                            fontSize: "1.3rem",
-                                            fontWeight: "700",
-                                            marginBottom: "1rem",
-                                            background: plan.gradient,
-                                            WebkitBackgroundClip: "text",
-                                            WebkitTextFillColor: "transparent",
-                                            backgroundClip: "text",
-                                        }}
-                                    >
-                                        {plan.price}
-                                    </p>
-                                    <p
-                                        style={{
-                                            color: "#64748b",
-                                            lineHeight: "1.6",
-                                            fontWeight: "500",
-                                        }}
-                                    >
-                                        {plan.desc}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                    <EduTrackPricing />
+                    <ContactSection />
 
 
-                    {/* Contact Section */}
-                    <div style={{
-                        width: "90%",
-                        background: "rgba(255,255,255,0.9)",
-                        backdropFilter: "blur(20px)",
-                        padding: "3rem",
-                        borderRadius: "24px",
-                        border: "1px solid rgba(255,255,255,0.2)",
-                        boxShadow: "0 20px 60px rgba(0,0,0,0.1)",
-                        display: "grid",
-                        gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
-                        gap: "3rem",
-                        alignItems: "start"
-                    }}>
-                        {/* Left Column - Contact Details */}
-                        <div>
-                            <h2 style={{
-                                fontSize: "1.8rem",
-                                marginBottom: "1.5rem",
-                                background: "linear-gradient(135deg, #006d77, #2E8B8B)",
-                                WebkitBackgroundClip: "text",
-                                WebkitTextFillColor: "transparent",
-                                backgroundClip: "text",
-                                fontWeight: "800"
-                            }}>
-                                Contact Us
-                            </h2>
 
-                            <p style={{
-                                marginBottom: "2rem",
-                                fontSize: "1.1rem",
-                                color: "#64748b",
-                                lineHeight: "1.6",
-                                fontWeight: "500"
-                            }}>
-                                We'd love to hear from you! Whether you have a question, need support,
-                                or just want to say hi, feel free to reach out.
-                            </p>
 
-                            <div style={{display: "flex", flexDirection: "column", gap: "1rem"}}>
-                                {[
-                                    {icon: "📞", text: "073 545 0541 / 072 422 0801"},
-                                    {icon: "✉️", text: "admin@edutrack-ai.com"},
-                                    {icon: "🌍", text: "www.edutrack-ai.com", isLink: true},
-                                    {icon: "🔗", text: "Follow us on LinkedIn"}
-                                ].map((contact, idx) => (
-                                    <div key={idx} style={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                        gap: "0.75rem",
-                                        padding: "0.75rem",
-                                        background: "rgba(0,109,119,0.05)",
-                                        borderRadius: "12px",
-                                        border: "1px solid rgba(0,109,119,0.1)"
-                                    }}>
-                                        <span style={{fontSize: "1.2rem"}}>{contact.icon}</span>
-                                        {contact.isLink ? (
-                                            <a
-                                                href={`http://${contact.text}`}
-                                                style={{
-                                                    color: "#006d77",
-                                                    textDecoration: "none",
-                                                    fontWeight: "600",
-                                                    fontSize: "1rem"
-                                                }}
-                                            >
-                                                {contact.text}
-                                            </a>
-                                        ) : (
-                                            <span style={{
-                                                fontSize: "1rem",
-                                                color: "#475569",
-                                                fontWeight: "500"
-                                            }}>{contact.text}</span>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Right Column - Contact Form */}
-                        <div>
-                            <form style={{display: "flex", flexDirection: "column", gap: "1.5rem"}}>
-                                <input
-                                    type="text"
-                                    placeholder="Your Name"
-                                    style={{
-                                        padding: "1rem",
-                                        borderRadius: "12px",
-                                        border: "1px solid rgba(0,109,119,0.2)",
-                                        fontSize: "1rem",
-                                        fontWeight: "500",
-                                        background: "rgba(255,255,255,0.8)",
-                                        backdropFilter: "blur(10px)",
-                                        transition: "all 0.3s ease"
-                                    }}
-                                    onFocus={(e) => {
-                                        e.target.style.borderColor = "#006d77";
-                                        e.target.style.boxShadow = "0 0 0 3px rgba(0,109,119,0.1)";
-                                    }}
-                                    onBlur={(e) => {
-                                        e.target.style.borderColor = "rgba(0,109,119,0.2)";
-                                        e.target.style.boxShadow = "none";
-                                    }}
-                                />
-                                <input
-                                    type="email"
-                                    placeholder="Your Email"
-                                    style={{
-                                        padding: "1rem",
-                                        borderRadius: "12px",
-                                        border: "1px solid rgba(0,109,119,0.2)",
-                                        fontSize: "1rem",
-                                        fontWeight: "500",
-                                        background: "rgba(255,255,255,0.8)",
-                                        backdropFilter: "blur(10px)",
-                                        transition: "all 0.3s ease"
-                                    }}
-                                    onFocus={(e) => {
-                                        e.target.style.borderColor = "#006d77";
-                                        e.target.style.boxShadow = "0 0 0 3px rgba(0,109,119,0.1)";
-                                    }}
-                                    onBlur={(e) => {
-                                        e.target.style.borderColor = "rgba(0,109,119,0.2)";
-                                        e.target.style.boxShadow = "none";
-                                    }}
-                                />
-                                <textarea
-                                    placeholder="Your Message"
-                                    rows="5"
-                                    style={{
-                                        padding: "1rem",
-                                        borderRadius: "12px",
-                                        border: "1px solid rgba(0,109,119,0.2)",
-                                        fontSize: "1rem",
-                                        fontWeight: "500",
-                                        background: "rgba(255,255,255,0.8)",
-                                        backdropFilter: "blur(10px)",
-                                        resize: "none",
-                                        transition: "all 0.3s ease"
-                                    }}
-                                    onFocus={(e) => {
-                                        e.target.style.borderColor = "#006d77";
-                                        e.target.style.boxShadow = "0 0 0 3px rgba(0,109,119,0.1)";
-                                    }}
-                                    onBlur={(e) => {
-                                        e.target.style.borderColor = "rgba(0,109,119,0.2)";
-                                        e.target.style.boxShadow = "none";
-                                    }}
-                                ></textarea>
-                                <button
-                                    type="submit"
-                                    style={{
-                                        padding: "1rem 2rem",
-                                        background: "linear-gradient(135deg, #006d77, #2E8B8B)",
-                                        color: "white",
-                                        border: "none",
-                                        borderRadius: "12px",
-                                        fontSize: "1rem",
-                                        fontWeight: "700",
-                                        cursor: "pointer",
-                                        transition: "all 0.3s ease",
-                                        boxShadow: "0 8px 30px rgba(0,109,119,0.3)"
-                                    }}
-                                    onMouseOver={(e) => {
-                                        e.target.style.transform = "translateY(-2px)";
-                                        e.target.style.boxShadow = "0 12px 40px rgba(0,109,119,0.4)";
-                                    }}
-                                    onMouseOut={(e) => {
-                                        e.target.style.transform = "translateY(0)";
-                                        e.target.style.boxShadow = "0 8px 30px rgba(0,109,119,0.3)";
-                                    }}
-                                >
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
             <Footer/>
