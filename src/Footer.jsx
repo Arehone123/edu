@@ -100,8 +100,6 @@ function Footer() {
                         </ul>
                     </div>
 
-
-
                     {/* Quick Links */}
                     <div style={{ flex: 1 }}>
                         <h4 style={{ fontSize: "1.1rem", marginBottom: "1rem", color: "#b3d9db" }}>Quick Links</h4>
