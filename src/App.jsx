@@ -15,7 +15,7 @@ function App() {
            <EduTrackHero />
             {/* About Us Section */}
             <div style={{
-                width: "1500px",
+                width: "100%",
                 minHeight: "100vh",
                 background: "linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)",
                 padding: "5rem 1.25rem",

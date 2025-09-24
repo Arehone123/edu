@@ -79,7 +79,7 @@ export default function EduTrackPricing() {
                         <div
                             key={idx}
                             style={{
-                                border: "2px solid #3b82f6",
+
                                 borderRadius: "16px",
                                 background: "white",
                                 padding: "2rem",

@@ -1,0 +1,65 @@
+/* Global reset for responsiveness */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Main container adjustments */
+@media (max-width: 1600px) {
+    .app-container {
+        width: 100% !important;
+        padding: 2rem 1rem !important;
+    }
+}
+
+/* About Us Section */
+@media (max-width: 1024px) {
+    .overview-text {
+        font-size: 1rem !important;
+        max-width: 90% !important;
+    }
+    .mission-vision {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+}
+
+/* CEO Section */
+@media (max-width: 768px) {
+    .ceo-section {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .ceo-section img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
+
+/* Dashboard Section */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+}
+
+/* Buttons */
+@media (max-width: 480px) {
+    .profile-buttons a {
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 0.9rem !important;
+        padding: 0.8rem 1rem !important;
+    }
+}
+
+/* Contact Section fix */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 2rem 1rem !important;
+    }
+}

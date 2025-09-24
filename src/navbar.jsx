@@ -24,13 +24,15 @@ function Navbar() {
     return (
         <>
             <div
+                className="navbar-container"
                 style={{
-                    width: "1500px",
+                    width: "100%",
                     backgroundColor: scrolled ? "rgba(255, 255, 255, 0.95)" : "white",
                     boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                     position: "fixed",
                     top: 0,
                     left: 0,
+                    right: 0,
                     zIndex: 1000,
                     transition: "all 0.3s ease",
                     backdropFilter: scrolled ? "blur(10px)" : "none"
@@ -41,13 +43,14 @@ function Navbar() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "space-between",
-                        padding: "1rem 2rem",
+                        padding: "1rem 1rem",
                         maxWidth: "1200px",
-                        margin: "0 auto"
+                        margin: "0 auto",
+                        width: "100%"
                     }}
                 >
                     {/* Logo */}
-                    <div style={{ display: "flex", alignItems: "center" }}>
+                    <div style={{ display: "flex", alignItems: "center", zIndex: 1001 }}>
                         <div
                             style={{
                                 width: "40px",
@@ -60,19 +63,11 @@ function Navbar() {
                                 justifyContent: "center",
                                 color: "white",
                                 fontWeight: "bold",
-                                fontSize: "1.2rem"
+                                fontSize: "1.2rem",
+                                flexShrink: 0
                             }}
                         >
-                            <img
-                                src="src/edutrackai%20logo.jpeg"
-                                alt="EduTrack Logo"
-                                style={{
-                                    width: "100%",
-                                    height: "100%",
-                                    objectFit: "cover",
-                                    borderRadius: "8px"
-                                }}
-                            />
+                            ET
                         </div>
                         <div>
                             <div
@@ -80,7 +75,8 @@ function Navbar() {
                                     fontWeight: 700,
                                     fontSize: "1.25rem",
                                     color: "#2D3748",
-                                    lineHeight: "1.2"
+                                    lineHeight: "1.2",
+                                    whiteSpace: "nowrap"
                                 }}
                             >
                                 EduTrack
@@ -90,7 +86,8 @@ function Navbar() {
                                     fontSize: "0.75rem",
                                     color: "#008B8B",
                                     fontWeight: 500,
-                                    lineHeight: "1"
+                                    lineHeight: "1",
+                                    whiteSpace: "nowrap"
                                 }}
                             >
                                 AI SOFTWARE
@@ -100,12 +97,12 @@ function Navbar() {
 
                     {/* Desktop Menu */}
                     <div
+                        className="desktop-menu"
                         style={{
                             display: "none",
                             alignItems: "center",
                             gap: "2rem"
                         }}
-                        className="desktop-menu"
                     >
                         {menuItems.map((item) => (
                             <a
@@ -117,7 +114,8 @@ function Navbar() {
                                     fontSize: "1rem",
                                     fontWeight: 500,
                                     transition: "color 0.2s ease",
-                                    cursor: "pointer"
+                                    cursor: "pointer",
+                                    whiteSpace: "nowrap"
                                 }}
                                 onMouseEnter={(e) => {
                                     e.target.style.color = "#008B8B";
@@ -142,7 +140,8 @@ function Navbar() {
                                     fontSize: "0.9rem",
                                     fontWeight: 600,
                                     cursor: "pointer",
-                                    transition: "all 0.2s ease"
+                                    transition: "all 0.2s ease",
+                                    whiteSpace: "nowrap"
                                 }}
                                 onMouseEnter={(e) => {
                                     e.target.style.backgroundColor = "#006D6D";
@@ -165,7 +164,8 @@ function Navbar() {
                                     fontSize: "0.9rem",
                                     fontWeight: 600,
                                     cursor: "pointer",
-                                    transition: "all 0.2s ease"
+                                    transition: "all 0.2s ease",
+                                    whiteSpace: "nowrap"
                                 }}
                                 onMouseEnter={(e) => {
                                     e.target.style.backgroundColor = "#008B8B";
@@ -184,15 +184,17 @@ function Navbar() {
                     {/* Mobile Hamburger Menu */}
                     <div
                         onClick={toggleMenu}
+                        className="mobile-menu-button"
                         style={{
                             display: "flex",
                             width: "30px",
                             height: "24px",
                             flexDirection: "column",
                             justifyContent: "space-between",
-                            cursor: "pointer"
+                            cursor: "pointer",
+                            zIndex: 1001,
+                            position: "relative"
                         }}
-                        className="mobile-menu-button"
                     >
                         {[1, 2, 3].map((line, index) => (
                             <span
@@ -220,6 +222,7 @@ function Navbar() {
 
                 {/* Mobile Dropdown Menu */}
                 <div
+                    className="mobile-dropdown"
                     style={{
                         position: "absolute",
                         top: "100%",
@@ -228,13 +231,14 @@ function Navbar() {
                         backgroundColor: "rgba(255, 255, 255, 0.98)",
                         backdropFilter: "blur(10px)",
                         boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
-                        transform: menuOpen ? "translateY(0)" : "translateY(-100%)",
+                        transform: menuOpen ? "translateY(0)" : "translateY(-20px)",
                         opacity: menuOpen ? 1 : 0,
                         visibility: menuOpen ? "visible" : "hidden",
                         transition: "all 0.3s ease",
-                        zIndex: 999
+                        zIndex: 999,
+                        maxHeight: menuOpen ? "500px" : "0",
+                        overflow: "hidden"
                     }}
-                    className="mobile-dropdown"
                 >
                     <div style={{ padding: "1rem 0" }}>
                         {menuItems.map((item, index) => (
@@ -244,7 +248,7 @@ function Navbar() {
                                 onClick={() => setMenuOpen(false)}
                                 style={{
                                     display: "block",
-                                    padding: "1rem 2rem",
+                                    padding: "1rem 1.5rem",
                                     borderBottom: index < menuItems.length - 1 ? "1px solid rgba(229, 229, 229, 0.4)" : "none",
                                     cursor: "pointer",
                                     fontSize: "1rem",
@@ -256,10 +260,12 @@ function Navbar() {
                                 onMouseEnter={(e) => {
                                     e.target.style.backgroundColor = "rgba(0, 139, 139, 0.05)";
                                     e.target.style.color = "#008B8B";
+                                    e.target.style.paddingLeft = "2rem";
                                 }}
                                 onMouseLeave={(e) => {
                                     e.target.style.backgroundColor = "transparent";
                                     e.target.style.color = "#4A5568";
+                                    e.target.style.paddingLeft = "1.5rem";
                                 }}
                             >
                                 {item.name}
@@ -267,7 +273,7 @@ function Navbar() {
                         ))}
 
                         {/* Mobile Action Buttons */}
-                        <div style={{ padding: "1.5rem 2rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                        <div style={{ padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                             <button
                                 style={{
                                     width: "100%",
@@ -275,7 +281,7 @@ function Navbar() {
                                     backgroundColor: "#008B8B",
                                     color: "white",
                                     border: "none",
-                                    borderRadius: "6px",
+                                    borderRadius: "8px",
                                     fontSize: "1rem",
                                     fontWeight: 600,
                                     cursor: "pointer",
@@ -283,10 +289,13 @@ function Navbar() {
                                 }}
                                 onMouseEnter={(e) => {
                                     e.target.style.backgroundColor = "#006D6D";
+                                    e.target.style.transform = "translateY(-1px)";
                                 }}
                                 onMouseLeave={(e) => {
                                     e.target.style.backgroundColor = "#008B8B";
+                                    e.target.style.transform = "translateY(0)";
                                 }}
+                                onClick={() => setMenuOpen(false)}
                             >
                                 Login
                             </button>
@@ -297,7 +306,7 @@ function Navbar() {
                                     backgroundColor: "transparent",
                                     color: "#008B8B",
                                     border: "2px solid #008B8B",
-                                    borderRadius: "6px",
+                                    borderRadius: "8px",
                                     fontSize: "1rem",
                                     fontWeight: 600,
                                     cursor: "pointer",
@@ -306,11 +315,14 @@ function Navbar() {
                                 onMouseEnter={(e) => {
                                     e.target.style.backgroundColor = "#008B8B";
                                     e.target.style.color = "white";
+                                    e.target.style.transform = "translateY(-1px)";
                                 }}
                                 onMouseLeave={(e) => {
                                     e.target.style.backgroundColor = "transparent";
                                     e.target.style.color = "#008B8B";
+                                    e.target.style.transform = "translateY(0)";
                                 }}
+                                onClick={() => setMenuOpen(false)}
                             >
                                 Register
                             </button>
@@ -330,27 +342,93 @@ function Navbar() {
                         width: "100%",
                         height: "100%",
                         backgroundColor: "rgba(0, 0, 0, 0.3)",
-                        zIndex: 998
+                        zIndex: 998,
+                        backdropFilter: "blur(2px)"
                     }}
                 ></div>
             )}
 
-            {/* Add CSS for responsive design */}
+
+
+            {/* Responsive CSS */}
             <style>{`
-                @media (min-width: 768px) {
+                /* Mobile First - Base styles for mobile */
+                .navbar-container {
+                    padding: 0;
+                }
+                
+                .desktop-menu {
+                    display: none !important;
+                }
+                
+                .mobile-menu-button {
+                    display: flex !important;
+                }
+                
+                .mobile-dropdown {
+                    display: block;
+                }
+
+                /* Tablet styles */
+                @media (min-width: 640px) {
+                    .navbar-container nav {
+                        padding: 1rem 1.5rem;
+                    }
+                }
+
+                /* Desktop styles */
+                @media (min-width: 1024px) {
+                    .navbar-container nav {
+                        padding: 1rem 2rem;
+                    }
+                    
                     .desktop-menu {
                         display: flex !important;
                     }
+                    
                     .mobile-menu-button {
                         display: none !important;
                     }
+                    
                     .mobile-dropdown {
                         display: none !important;
                     }
                 }
+
+                /* Large desktop adjustments */
+                @media (min-width: 1200px) {
+                    .desktop-menu {
+                        gap: 2.5rem;
+                    }
+                }
+
+                /* Very small screens */
+                @media (max-width: 480px) {
+                    .navbar-container nav {
+                        padding: 0.75rem 1rem;
+                    }
+                    
+                    .navbar-container nav > div:first-child > div:first-child {
+                        width: 35px;
+                        height: 35px;
+                        margin-right: 0.5rem;
+                    }
+                    
+                    .navbar-container nav > div:first-child > div:last-child > div:first-child {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                /* Smooth scrolling for anchor links */
+                html {
+                    scroll-behavior: smooth;
+                }
+
+                /* Prevent horizontal scroll on small screens */
+                body {
+                    overflow-x: hidden;
+                }
             `}</style>
-
-
         </>
     );
 }

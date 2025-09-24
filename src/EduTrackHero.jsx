@@ -1,4 +1,5 @@
 import React from 'react';
+import StatsSection from "./statssection.jsx";
 
 function EduTrackHero() {
     return (
@@ -9,11 +10,51 @@ function EduTrackHero() {
             background: '#f9f9f9',
             color: '#333'
         }}>
-            {/* Hero Section with Overlay */}
+            {/* Extra CSS for responsiveness */}
+            <style>
+                {`
+                @media (max-width: 1024px) {
+                    .hero-text h1 {
+                        font-size: 2rem;
+                        max-width: 400px;
+                    }
+                }
+                @media (max-width: 100%) {
+                    .hero-overlay {
+                        padding: 1.5rem;
+                        padding-left: 2rem;
+                        align-items: center;
+                        text-align: center;
+                    }
+                    .hero-text h1 {
+                        font-size: 1.75rem;
+                        max-width: 100%;
+                    }
+                    .bottom-section {
+                        flex-direction: column;
+                    }
+                    .bottom-section img {
+                        height: 200px;
+                    }
+                }
+                @media (max-width: 480px) {
+                    .hero-text h1 {
+                        font-size: 1.5rem;
+                    }
+                    .hero-overlay button {
+                        width: 100%;
+                        font-size: 0.9rem;
+                        padding: 0.6rem;
+                    }
+                }
+                `}
+            </style>
+
+            {/* Hero Section */}
             <section style={{
                 position: 'relative',
                 width: '100%',
-                maxWidth: '1500px',
+                maxWidth: '1900px',
                 overflow: 'hidden',
                 borderRadius: '12px',
                 marginBottom: '1rem'
@@ -27,8 +68,8 @@ function EduTrackHero() {
                         display: 'block'
                     }}
                 />
-                {/* Gradient Overlay with Text */}
-                <div style={{
+                {/* Gradient Overlay */}
+                <div className="hero-overlay" style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
@@ -42,49 +83,52 @@ function EduTrackHero() {
                     padding: '2rem',
                     paddingLeft: '4rem'
                 }}>
-                    <h1 style={{
-                        fontSize: '2.5rem',
-                        margin: '1rem 0',
-                        color: '#045c5c',
-                        fontWeight: 'bold',
-                        textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
-                        maxWidth: '500px'
-                    }}>
-                        SMART EDUCATION MANAGEMENT
-                    </h1>
-                    <button
-                        style={{
-                            backgroundColor: '#045c5c',
-                            color: 'white',
-                            padding: '0.75rem 1.5rem',
-                            fontSize: '1rem',
-                            border: 'none',
-                            borderRadius: '6px',
-                            cursor: 'pointer',
-                            transition: 'background 0.3s',
-                            boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.target.style.backgroundColor = '#034b4b';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.target.style.backgroundColor = '#045c5c';
-                        }}
-                    >
-                        Get Started For Free
-                    </button>
+                    <div className="hero-text">
+                        <h1 style={{
+                            fontSize: '2.5rem',
+                            margin: '1rem 0',
+                            color: '#045c5c',
+                            fontWeight: 'bold',
+                            textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
+                            maxWidth: '500px'
+                        }}>
+                            SMART EDUCATION MANAGEMENT
+                        </h1>
+                        <button
+                            className="cta-btn"
+                            style={{
+                                backgroundColor: '#045c5c',
+                                color: 'white',
+                                padding: '0.75rem 1.5rem',
+                                fontSize: '1rem',
+                                border: 'none',
+                                borderRadius: '6px',
+                                cursor: 'pointer',
+                                transition: 'background 0.3s',
+                                boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                            }}
+                            onMouseEnter={(e) => {
+                                e.target.style.backgroundColor = '#034b4b';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.backgroundColor = '#045c5c';
+                            }}
+                        >
+                            Get Started For Free
+                        </button>
+                    </div>
                 </div>
             </section>
 
-            {/* Bottom Section - Two equal images with gap */}
-            <section style={{
+            {/* Bottom Section */}
+            <section className="bottom-section" style={{
                 display: 'flex',
                 width: '100%',
-                maxWidth: '1500px',
+                maxWidth: '1900px',
                 gap: '1rem',
                 minHeight: '300px'
             }}>
-                {/* Left bottom image */}
+                {/* Left Image */}
                 <div style={{
                     flex: '1',
                     overflow: 'hidden',
@@ -102,7 +146,7 @@ function EduTrackHero() {
                     />
                 </div>
 
-                {/* Right bottom image */}
+                {/* Right Image */}
                 <div style={{
                     flex: '1',
                     overflow: 'hidden',
@@ -120,6 +164,8 @@ function EduTrackHero() {
                     />
                 </div>
             </section>
+
+            <StatsSection />
         </div>
     );
 }
