@@ -182,105 +182,6 @@ function App() {
                         </div>
                     </div>
                     <KeyBenefits />
-                    {/* Business Profile Section */}
-                    <div
-                        style={{
-
-                            borderRadius: "40px",
-                            background: "transparent",
-                            padding: "2.5rem 3rem",
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "2rem",
-                            alignItems: "center",
-                            textAlign: "center",
-
-                        }}
-                    >
-                        <h3
-                            style={{
-                                background: "linear-gradient(135deg, #006d77, #2E8B8B)",
-                                WebkitBackgroundClip: "text",
-                                WebkitTextFillColor: "transparent",
-                                backgroundClip: "text",
-                                fontSize: "1.3rem",
-                                fontWeight: "700",
-                                margin: "0 0 1rem 0",
-                                textAlign: "center",
-                            }}
-                        >
-                            Business Profile
-                        </h3>
-
-                        {/* Buttons */}
-                        <div
-                            style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                gap: "1rem",
-                                flexWrap: "wrap",
-                            }}
-                        >
-                            {/* View PDF */}
-                            <a
-                                href="/path-to-business-profile.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                    padding: "0.6rem 1.2rem",
-                                    background: "linear-gradient(135deg, #006d77, #2E8B8B)",
-                                    color: "#fff",
-                                    textDecoration: "none",
-                                    borderRadius: "30px",
-                                    fontWeight: "500",
-                                    fontSize: "0.9rem",
-                                    transition: "all 0.2s ease",
-
-                                }}
-                                onMouseOver={(e) => {
-                                    e.currentTarget.style.transform = "translateY(-2px)";
-                                    e.currentTarget.style.boxShadow =
-                                        "0 6px 18px rgba(0,109,119,0.3)";
-                                }}
-                                onMouseOut={(e) => {
-                                    e.currentTarget.style.transform = "translateY(0)";
-                                    e.currentTarget.style.boxShadow =
-                                        "0 3px 12px rgba(0,109,119,0.25)";
-                                }}
-                            >
-                                View PDF
-                            </a>
-
-                            {/* Download PDF */}
-                            <a
-                                href="EduTrack_AI_Software_Company_Profile.pdf"
-                                download="EduTrackAI_BusinessProfile.pdf"
-                                style={{
-                                    padding: "0.6rem 1.2rem",
-                                    background: "linear-gradient(135deg, #10B981, #059669)",
-                                    color: "#fff",
-                                    textDecoration: "none",
-                                    borderRadius: "30px",
-                                    fontWeight: "500",
-                                    fontSize: "0.9rem",
-                                    transition: "all 0.2s ease",
-
-                                }}
-                                onMouseOver={(e) => {
-                                    e.currentTarget.style.transform = "translateY(-2px)";
-                                    e.currentTarget.style.boxShadow =
-                                        "0 6px 18px rgba(16,185,129,0.3)";
-                                }}
-                                onMouseOut={(e) => {
-                                    e.currentTarget.style.transform = "translateY(0)";
-                                    e.currentTarget.style.boxShadow =
-                                        "0 3px 12px rgba(16,185,129,0.25)";
-                                }}
-                            >
-                                Download PDF
-                            </a>
-                        </div>
-                    </div>
 
                     {/* Dashboard Section */}
                     <div style={{
@@ -292,29 +193,36 @@ function App() {
                         justifyContent: "center",
                     }}>
                         <div style={{
-                            maxWidth: "1200px",
+                            maxWidth: "1600px",
                             width: "100%",
-                            padding: "0 2rem",
+                            padding: "0 1rem",
                             display: "grid",
                             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                            gap: "2rem",
+                            gap: "1rem",
                         }}>
                             {[
                                 {
-                                    title: "Student Dashboard",
-                                    desc: "Track your progress, view assignments, and interact with teachers.",
-                                    img: "src/student.jpeg"
+                                    title: "Principal Dashboard",
+                                    desc: "Get insights into school-wide performance, make strategic decisions and challened communication with teachers",
+                                    img: "src/principals.jpeg"
                                 },
                                 {
                                     title: "Teacher Dashboard",
-                                    desc: "Monitor student performance, submit grades, and manage classes efficiently.",
-                                    img: "src/principal.jpeg"
+                                    desc: "Monitor student performance, submit grades, and manage classes efficiently.A great streamlined communication with the parents",
+                                    img: "src/teachers.jpeg"
                                 },
                                 {
-                                    title: "Principal Dashboard",
-                                    desc: "Get insights into school-wide performance and make strategic decisions.",
-                                    img: "src/teacher.jpeg"
-                                }
+                                    title: "Parent Dashboard",
+                                    desc: "Get insights into how your child is performing and make strategic decisions and support. This plartform gets parents in communication with the school. ",
+                                    img: "src/parents.jpeg"
+                                },
+                                {
+                                    title: "Learner Dashboard",
+                                    desc: "Track your progress, view assignments, and interact with teachers and being in touch with them for personalized communication.",
+                                    img: "src/learners.jpeg"
+                                },
+
+
                             ].map((dashboard, idx) => (
                                 <div
                                     key={idx}

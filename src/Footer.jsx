@@ -9,13 +9,13 @@ function Footer() {
         "Educational Data Insights",
         "Smart Assessment Tools",
         "Performance Reporting",
+        "Channeled Communication"
     ];
 
     return (
         <div
             style={{
                 width: "100%",
-
                 margin: "0 auto",
                 backgroundColor: "#006d77",
                 color: "white",
@@ -206,7 +206,7 @@ function Footer() {
                             <div style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem" }}>
                                 <MapPin size={18} style={{ color: "#b3d9db", marginTop: "0.1rem" }} />
                                 <span style={{ fontSize: "clamp(0.8rem, 2vw, 0.9rem)", lineHeight: "1.4" }}>
-                  Cape Town, Western Cape, South Africa
+                   South Africa
                 </span>
                             </div>
                         </div>
