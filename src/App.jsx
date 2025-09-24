@@ -5,6 +5,7 @@ import KeyBenefits from "./KeyBenefits.jsx";
 import EduTrackPricing from "./pricing.jsx";
 import EduTrackHero from "./EduTrackHero.jsx";
 import ContactSection from "./contact us.jsx";
+import StripBand from "./strip-band.jsx";
 
 function App() {
     return (
@@ -12,7 +13,8 @@ function App() {
             <Navbar/>
 
             {/* Banner / Landing Page */}
-           <EduTrackHero />
+            <EduTrackHero />
+
             {/* About Us Section */}
             <div style={{
                 width: "100%",
@@ -31,6 +33,7 @@ function App() {
                     flexDirection: "column",
                     gap: "4rem",
                 }}>
+
                     {/* Header */}
                     <div style={{textAlign: "center"}}>
                         <h2 style={{
@@ -179,8 +182,9 @@ function App() {
                         </div>
                     </div>
 
-                    <KeyBenefits />
+                    <StripBand />
 
+                    <KeyBenefits />
 
                     {/* Business Profile Section */}
                     <div
@@ -203,9 +207,10 @@ function App() {
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
                                 backgroundClip: "text",
-                                fontSize: "1.8rem",
-                                fontWeight: "800",
-                                margin: 0,
+                                fontSize: "1.3rem",
+                                fontWeight: "700",
+                                margin: "0 0 1rem 0",
+                                textAlign: "center",
                             }}
                         >
                             Business Profile
@@ -216,7 +221,7 @@ function App() {
                             style={{
                                 display: "flex",
                                 justifyContent: "center",
-                                gap: "1.5rem",
+                                gap: "1rem",
                                 flexWrap: "wrap",
                             }}
                         >
@@ -226,25 +231,25 @@ function App() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{
-                                    padding: "1rem 2rem",
+                                    padding: "0.6rem 1.2rem",
                                     background: "linear-gradient(135deg, #006d77, #2E8B8B)",
                                     color: "#fff",
                                     textDecoration: "none",
-                                    borderRadius: "50px",
-                                    fontWeight: "600",
-                                    fontSize: "1rem",
-                                    transition: "all 0.3s ease",
-                                    boxShadow: "0 8px 30px rgba(0,109,119,0.3)",
+                                    borderRadius: "30px",
+                                    fontWeight: "500",
+                                    fontSize: "0.9rem",
+                                    transition: "all 0.2s ease",
+                                    boxShadow: "0 3px 12px rgba(0,109,119,0.25)",
                                 }}
                                 onMouseOver={(e) => {
-                                    e.currentTarget.style.transform = "translateY(-3px)";
+                                    e.currentTarget.style.transform = "translateY(-2px)";
                                     e.currentTarget.style.boxShadow =
-                                        "0 12px 40px rgba(0,109,119,0.4)";
+                                        "0 6px 18px rgba(0,109,119,0.3)";
                                 }}
                                 onMouseOut={(e) => {
                                     e.currentTarget.style.transform = "translateY(0)";
                                     e.currentTarget.style.boxShadow =
-                                        "0 8px 30px rgba(0,109,119,0.3)";
+                                        "0 3px 12px rgba(0,109,119,0.25)";
                                 }}
                             >
                                 View PDF
@@ -255,32 +260,31 @@ function App() {
                                 href="EduTrack_AI_Software_Company_Profile.pdf"
                                 download="EduTrackAI_BusinessProfile.pdf"
                                 style={{
-                                    padding: "1rem 2rem",
+                                    padding: "0.6rem 1.2rem",
                                     background: "linear-gradient(135deg, #10B981, #059669)",
                                     color: "#fff",
                                     textDecoration: "none",
-                                    borderRadius: "50px",
-                                    fontWeight: "600",
-                                    fontSize: "1rem",
-                                    transition: "all 0.3s ease",
-                                    boxShadow: "0 8px 30px rgba(16,185,129,0.3)",
+                                    borderRadius: "30px",
+                                    fontWeight: "500",
+                                    fontSize: "0.9rem",
+                                    transition: "all 0.2s ease",
+                                    boxShadow: "0 3px 12px rgba(16,185,129,0.25)",
                                 }}
                                 onMouseOver={(e) => {
-                                    e.currentTarget.style.transform = "translateY(-3px)";
+                                    e.currentTarget.style.transform = "translateY(-2px)";
                                     e.currentTarget.style.boxShadow =
-                                        "0 12px 40px rgba(16,185,129,0.4)";
+                                        "0 6px 18px rgba(16,185,129,0.3)";
                                 }}
                                 onMouseOut={(e) => {
                                     e.currentTarget.style.transform = "translateY(0)";
                                     e.currentTarget.style.boxShadow =
-                                        "0 8px 30px rgba(16,185,129,0.3)";
+                                        "0 3px 12px rgba(16,185,129,0.25)";
                                 }}
                             >
                                 Download PDF
                             </a>
                         </div>
                     </div>
-
 
                     {/* Dashboard Section */}
                     <div style={{
@@ -369,19 +373,14 @@ function App() {
 
                     {/* Pricing Section */}
                     <EduTrackPricing />
+
+                    {/* Contact Section */}
                     <ContactSection />
-
-
-
-
                 </div>
             </div>
             <Footer/>
-
         </>
-
-
-    )
+    );
 }
 
-export default App
+export default App;

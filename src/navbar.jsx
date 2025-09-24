@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from "./edutrackai logo.jpeg";
 
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -55,7 +56,7 @@ function Navbar() {
                             style={{
                                 width: "40px",
                                 height: "40px",
-                                backgroundColor: "#008B8B",
+
                                 borderRadius: "6px",
                                 marginRight: "0.75rem",
                                 display: "flex",
@@ -67,7 +68,7 @@ function Navbar() {
                                 flexShrink: 0
                             }}
                         >
-                            ET
+                            <img src={logo} alt="EduTrackAI Logo" />
                         </div>
                         <div>
                             <div
