@@ -31,7 +31,7 @@ function App() {
                     width: "1500",
                     display: "flex",
                     flexDirection: "column",
-                    gap: "4rem",
+                    gap: "2rem",
                 }}>
 
                     {/* Header */}
@@ -73,7 +73,7 @@ function App() {
                     <div style={{
                         display: "flex",
                         flexWrap: "wrap",
-                        gap: "3rem",
+                        gap: "2rem",
                         alignItems: "center",
                         justifyContent: "center",
                         background: "rgba(255,255,255,0.7)",
@@ -181,15 +181,11 @@ function App() {
                             </div>
                         </div>
                     </div>
-
-                    <StripBand />
-
                     <KeyBenefits />
-
                     {/* Business Profile Section */}
                     <div
                         style={{
-                            border: "2px solid rgba(0,109,119,0.3)",
+
                             borderRadius: "40px",
                             background: "transparent",
                             padding: "2.5rem 3rem",
@@ -198,7 +194,7 @@ function App() {
                             gap: "2rem",
                             alignItems: "center",
                             textAlign: "center",
-                            boxShadow: "0 12px 40px rgba(0,0,0,0.05)",
+
                         }}
                     >
                         <h3
@@ -239,7 +235,7 @@ function App() {
                                     fontWeight: "500",
                                     fontSize: "0.9rem",
                                     transition: "all 0.2s ease",
-                                    boxShadow: "0 3px 12px rgba(0,109,119,0.25)",
+
                                 }}
                                 onMouseOver={(e) => {
                                     e.currentTarget.style.transform = "translateY(-2px)";
@@ -268,7 +264,7 @@ function App() {
                                     fontWeight: "500",
                                     fontSize: "0.9rem",
                                     transition: "all 0.2s ease",
-                                    boxShadow: "0 3px 12px rgba(16,185,129,0.25)",
+
                                 }}
                                 onMouseOver={(e) => {
                                     e.currentTarget.style.transform = "translateY(-2px)";

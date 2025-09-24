@@ -36,14 +36,7 @@ export default function EduTrackPricing() {
             </div>
 
             {/* Pricing Cards */}
-            <div style={{
-                width: "100%",
-                borderRadius: "24px",
-                background: "#f8fafc",
-                padding: "3rem 2rem",
-                marginBottom: "3rem",
-                boxShadow: "0 10px 30px rgba(30, 64, 175, 0.1)"
-            }}>
+            <div>
                 <h2 style={{
                     fontSize: "2.2rem",
                     color: "#006d77",

@@ -22,18 +22,7 @@ function KeyBenefits() {
         <>
             <div
                 className="key-benefits-container"
-                style={{
-                    border: "1px solid rgba(0,109,119,0.15)",
-                    borderRadius: "20px",
-                    background: "linear-gradient(135deg, rgba(0,139,139,0.02) 0%, rgba(0,109,119,0.05) 100%)",
-                    padding: "2rem 1.5rem",
-                    display: "grid",
-                    gap: "2rem",
-                    margin: "2rem auto",
-                    maxWidth: "1100px",
-                    width: "100%",
-                    boxSizing: "border-box",
-                }}
+
             >
                 {/* Header */}
                 <div
