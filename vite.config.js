@@ -8,7 +8,7 @@ export default defineConfig({
         host: true, // listen on all network interfaces
         port: 5173, // optional, your dev port
         allowedHosts: [
-            "3fb1b84b957c.ngrok-free.app"
+            "f29b592b99cf.ngrok-free.app"
 
         ]
     }
