@@ -3,7 +3,7 @@ import React from 'react';
 export default function EduTrackPricing() {
     return (
         <div style={{
-            maxWidth: "1200px",
+            maxWidth: "100%",
             margin: "0 auto",
             padding: "2rem",
             fontFamily: "system-ui, -apple-system, sans-serif",
@@ -25,7 +25,7 @@ export default function EduTrackPricing() {
                 <p style={{
                     fontSize: "1.1rem",
                     color: "#006d77",
-                    maxWidth: "800px",
+                    maxWidth: "100%",
                     margin: "0 auto",
                     lineHeight: "1.6"
                 }}>
@@ -52,7 +52,7 @@ export default function EduTrackPricing() {
                     gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
                     gap: "2rem",
                     width: "100%",
-                    maxWidth: "800px",
+                    maxWidth: "100%",
                     margin: "0 auto"
                 }}>
                     {[
